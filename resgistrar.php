@@ -1,4 +1,8 @@
 <?php
+/**Si la solicitud post (insertar) de los atributos nombre, apellidos, etc está empty(vacio) entonces
+ * me vas a redireccionar a la pagina del index y le vas a mandar una variable llamada mensaje que 
+ * tendra el valor de falta.
+ */
 if(empty($_POST['nombre']) || empty($_POST['apellidos']) || empty($_POST['telefono'])
 || empty($_POST['email']) || empty($_POST['contrasenia']) || empty($_POST['direccion'])){
     header('Location:index.php?mensaje=falta');
